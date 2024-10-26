@@ -90,12 +90,13 @@ class unit {
     }
   }
   void slowBounce() {
-    float bd=20; //bouncing distance
+    float bdx=100; //horizontal bouncing distance
+    float bdy=20; //vertical bouncing distance
     float bf=1; //bouncing factor;
-    if (x<bd) dx+=bf;
-    if (x>width-bd) dx-=bf;
-    if (y<bd) dy+=bf;
-    if (y>height-bd) dy-=bf;
+    if (x<bdx) dx+=bf;
+    if (x>width-bdx) dx-=bf;
+    if (y<bdy) dy+=bf;
+    if (y>height-bdy) dy-=bf;
   }
   void show() {
     stroke(0);
@@ -200,11 +201,11 @@ class unit {
   }
 }
 
-unit[] units=new unit[400];
+unit[] units=new unit[600];
 
 void setup() {
   //System.out.println("start");
-  size(1000,600);
+  size(1400,600);
   for (int i=0;i<units.length;i++) {
     units[i]=new unit((float)Math.random()*width,(float)Math.random()*height,(float)Math.random()*12-6,(float)Math.random()*12-6,i,(int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
   }
