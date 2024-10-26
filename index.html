@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 	<head>
 		<meta charset="utf-8">
-		<title>Title</title>
+		<title>Boids</title>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles.css">
 		<script src="processing.js"></script>
 	</head>
 	<body>
 		<header>
-			<h1>Headline</h1>
+			<h1>Boids Simulation - a flock of birds</h1>
 		</header>
 			<section id="content">
 				<canvas id="Chemotaxis" data-processing-sources="Chemotaxis.pde">
 				</canvas>
 		    </section>
 	    <footer>
-		    Footer
+		    Each boid (a colored circle) follows a biased random walk.<br/>Although each boid has some random acceleration each frame, the majority of its path is controlled by three rules - separation (don't get too close to other boids), alignment (match velocity to neighbor boids), and centering (move closer to the center of the boid's group).<br/>Boids are also attracted to the cursor. <br/>Credit to <a href="eater.net/boids">Ben Eater</a> for some of the equations for this simulation.
 	    </footer>
 	</body>
 </html>
