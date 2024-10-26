@@ -10,13 +10,13 @@ double lerp(double a, double b, double t) {
 
 double dist(double x1, double y1, double x2, double y2) {
   double cx=x1-x2;
-  if (x1<x2) {
+  /*if (x1<x2) {
     cx=Math.max(cx,x1+width-x2);
-  }
+  }*/
   double cy=y1-y2;
-  if (y1<y2) {
+  /*if (y1<y2) {
     cy=Math.max(cy,y1+height-y2);
-  }
+  }*/
   return Math.sqrt(cx*cx+cy*cy);
 }
 
@@ -50,7 +50,7 @@ class unit {
     sd=10; //20 - separation visual range
     af=0.03; //0.03 - alignment factor
     ad=25; //50 - alignment visual range
-    cf=0.005; //0.005 - centering factor
+    cf=0.02; //0.005 - centering factor
     cd=37.5; //75 - centering visual range
   }
   void move() {
